@@ -1,41 +1,27 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "astralis-client",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Astralis Client",
+	"description": "A lightweight, optimized Minecraft client mod for SMP gameplay.",
 	"authors": [
-		"Me!"
+		"Jules"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"icon": "assets/astralis-client/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.astralis.client.AstralisClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"astralis-client.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.21.8",
+		"fabricloader": ">=0.17.1",
+		"minecraft": "~1.21.4",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
